@@ -48,8 +48,7 @@ bool processArgs(const std::vector<std::string>& args, Appconfig& app_config) {
       }
     }
 
-    const auto output_index {args[i].find("-o")};
-    if (output_index != std::string::npos) {
+    if (args[i].find("-o") != std::string::npos) {
       if (i < args.size() - 1) {
         app_config.output_file = args[i + 1];
       }

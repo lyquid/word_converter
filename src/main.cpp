@@ -5,11 +5,21 @@
 #include <string>
 #include <vector>
 
+/**
+ * @brief Application config options.
+ */
 struct Appconfig {
   std::string input_file {};
   std::string output_file {};
 };
 
+/**
+ * @brief Processes the args given by CLI.
+ * @param args The args in a vector of strings format.
+ * @param app_config The config for the app.
+ * @return True if the arguments were OK. It can only fail if there's no input
+ *  file specified.
+ */
 bool processArgs(const std::vector<std::string>& args, Appconfig& app_config);
 
 int main(int argc, char* argv[]) {
